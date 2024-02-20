@@ -1,0 +1,13 @@
+<svg width="42.000000" height="42.000000" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip290_209">
+			<rect id="Facebook" width="42.000000" height="42.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip290_209)">
+		<path id="Subtract" d="M26.3155 18.5132L25.7171 22.3115L22.6293 22.3115L22.6293 31.5L18.4822 31.5L18.4822 22.3115L15.1191 22.3115L15.1191 18.5132L18.4822 18.5132L18.4822 15.6162C18.4822 12.3223 20.463 10.5 23.497 10.5C24.4993 10.5122 25.4994 10.5977 26.4891 10.7554L26.4891 13.9902L24.7896 13.9902C23.1439 13.9902 22.6293 15.0049 22.6293 16.0439L22.6293 18.5132L26.3155 18.5132Z" clip-rule="evenodd" fill="#CECECE" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
