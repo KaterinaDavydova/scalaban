@@ -19,12 +19,12 @@ function toggleMenu() {
     document.body.classList.toggle('lock');
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let hidden_block = document.getElementById("portfolio-hidden");
     let colorModeCheckbox = document.getElementById("color_mode");
     let portfolioCases = document.querySelector('.portfolio__cases');
 
-    colorModeCheckbox.addEventListener("click", function() {
+    colorModeCheckbox.addEventListener("click", function () {
         if (hidden_block.classList.contains("hidden")) {
             hidden_block.classList.remove("hidden");
             portfolioCases.classList.add("hidden");
@@ -36,20 +36,41 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(function () {
-    $('.investment__slider').slick({
+    const $slider = $('.investment__slider');
+    const $progressBar = $('.investment__progress');
+    const $progressBarLabel = $('.slider__label');
+
+    $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+
+        $progressBar
+            .css('background-size', calc + '% 100%')
+            .attr('aria-valuenow', calc);
+
+        $progressBarLabel.text(calc + '% completed');
+    });
+
+    $slider.slick({
+        speed: 400,
         infinite: true,
-        // variableWidth: true,
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
 
         responsive: [
             {
-              breakpoint: 769, 
-              settings: {
-                slidesToShow: 1, 
-                slidesToScroll: 1,
-            }
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
             }
         ]
     });
