@@ -188,10 +188,6 @@
 					line-height: 24px;
 					margin-bottom: 40px;
 					text-transform: uppercase;
-
-					// &:nth-last-child(n + 2) {
-					// 	margin-bottom: 0px;
-					// }
 				}
 
 				&:nth-last-child(n + 2) {
@@ -242,9 +238,6 @@
 			.focus__paragraph {
 				margin-bottom: 14px;
 				width: 80%;
-				// .focus__paragraph:last-child {
-				// 	margin-bottom: 0px;
-				// }
 			}
 
 			.focus__btn {
@@ -259,7 +252,6 @@
 	.portfolio__container {
 		padding: 120px 20px;
 		background: rgb(48, 48, 48);
-		// height: calc(100vh + 52px);
 
 		.portfolio__heading {
 			color: $textYellow;
@@ -297,26 +289,12 @@
 					border-radius: 2px;
 					background: rgba(238, 239, 225, 0.1);
 					transition: transform .2s;
-					
-					// transition: all 0.3s ease;
-					// position: relative;
 
 					&:hover {
 						-ms-transform: scale(1.3);
 						-webkit-transform: scale(1.3);
 						transform: scale(1.3);
-
-						// transform: translateY(10px) scale(1.1);
-  						// z-index: 1;
 					}
-					// &:hover:before {
-					// 	content: "";
-					// 	position: absolute;
-					// 	top: 100%;
-					// 	left: 0;
-					// 	width: 100%;
-					// 	height: 10px;
-					// }
 
 					img {
 						max-width: 70%;
@@ -799,6 +777,7 @@
 						width: 60px;
 						height: 48px;
 						position: absolute;
+						z-index: 5;
 						background-image: url("/images/founder-bl-quote.svg");
 						top: 80px;
 						left: 60px;
@@ -894,6 +873,8 @@
 			}
 
 			.footer__social-media {
+				display: flex;
+				gap: 10px;
 				.footer__icon {
 					.icon_img {
 						&:hover {
@@ -985,6 +966,36 @@
 
 			.origin__inner {
 				grid-area: 1/2/5/6;
+			}
+		}
+	}
+}
+
+@media (max-width: 1040px) {
+	
+	.founder {
+		.founder__container {
+			.founder__inner {				
+				.founder__photo {
+					img {}
+				}
+				.founder__paragraph {
+					.founder__text {
+						&::before{
+							top: 10%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		.footer__container {
+			.footer__nav {
+				.footer__nav-menu {
+					gap: 50px;
+				}
 			}
 		}
 	}
@@ -1337,6 +1348,49 @@
 		}
 	}
 
+	.founder {
+		.founder__container {
+			.founder__inner {				
+				.founder__photo {
+					img {}
+				}
+				.founder__paragraph {
+					.founder__text {
+						&::before{
+							top: 5%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		.footer__container {
+			padding: 60px 20px 30px;
+
+			.footer__title {
+
+			}
+
+			.footer__btn {
+				max-width: 350px;
+				margin-bottom: 60px;
+			}
+
+			.footer__nav {
+				flex-direction: column;
+
+				.footer__nav-menu {
+					gap: 30px 60px;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 768px) {
@@ -1374,6 +1428,17 @@
 					min-width: 610px;
 					transform: translate(0%, -10%);
 
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0px;
+						width: 100%;
+						height: 50px;
+						background: linear-gradient(to top, #fff, transparent);
+						background: linear-gradient(180deg, rgb(238, 255, 18), rgba(238, 255, 18, 0) 100%);
+						transform: rotate(-180.00deg);
+					}
+
 					img {}
 				}
 
@@ -1383,6 +1448,12 @@
 					.founder__text {
 						line-height: 22px;
 						width: 100%;
+
+						&::before{
+							left: 10%;
+							top: 40%;
+							transform: translate(-50%, -50%);
+						}
 					}
 
 					.founder__signature {
@@ -1407,32 +1478,6 @@
 		}
 	}
 
-	.footer {
-		.footer__container {
-			padding: 60px 20px 30px;
-
-			.footer__title {
-
-			}
-
-			.footer__btn {
-				max-width: 350px;
-				margin-bottom: 60px;
-			}
-
-			.footer__nav {
-				flex-direction: column;
-
-				.footer__nav-menu {
-					gap: 30px 60px;
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
-					margin-bottom: 30px;
-				}
-			}
-		}
-	}
 }
 
 @media (max-width: 480px) {
@@ -1468,101 +1513,6 @@
 			}
 		}
 	}
-
-
-	// .investment {
-	// 	.investment__container {
-	// 		padding: 60px 20px;
-
-	// 		.investment__headline{
-	// 			flex-direction: column-reverse;
-	// 			.investment__heading {
-	// 				margin-top: 40px;
-	// 				line-height: 60px;
-	// 			}
-	// 			.investment__img {
-	// 				img {}
-	// 			}
-	// 		}
-
-	// 		.investment__slider{
-	// 			.investment__slide{
-	// 				display: flex;
-	// 				flex-direction: column;
-	// 				.investment__title{
-	// 					line-height: 30px;
-	// 					margin-bottom: 20px;
-	// 				}
-	// 				.investment__text{
-	// 					line-height: 22px;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-	// .focus{
-	// 	.focus__container{
-	// 		padding: 160px 20px;
-	// 		padding: 60px 20px;
-	// 		flex-direction: column;
-	// 		position: relative;
-	// 		top: 70px;
-
-	// 		.focus__img {
-	// 			width: 19vw;
-	// 			height: auto;
-	// 			img{
-
-	// 			}
-	// 		}
-	// 		.focus__text-block{
-	// 			.focus__heading{
-	// 				font-size: 64px;
-	// 				line-height: 71px;
-	// 			}
-	// 			.focus__paragraph{
-	// 				line-height: 22px;
-	// 				width: 100%;
-	// 			}
-	// 			.focus__btn{
-	// 				max-width: 350px;
-	// 				height: 50px;
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-	// .portfolio{
-	// 	.portfolio__container{
-	// 		padding: 60px 20px;
-
-	// 		.portfolio__heading{
-	// 			line-height: 71px;
-	// 			margin-bottom: 30px;
-	// 		}
-
-	// 		.portfolio__btn-container{
-	// 			margin-bottom: 40px;
-	// 		}
-
-	// 		.portfolio__cases{
-	// 			.portfolio__text{
-	// 				width: 100%;
-	// 			}
-	// 			.portfolio__flex{
-	// 				margin-top: 47px;
-	// 				flex-wrap: wrap;
-	// 				gap: 16px;
-
-	// 				.portfolio__flex-item{
-	// 					min-width: 138px;
-	// 					img {}
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
 
 	.values{
 		.values__container{

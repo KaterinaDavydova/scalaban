@@ -1033,6 +1033,7 @@ button:hover {
   width: 60px;
   height: 48px;
   position: absolute;
+  z-index: 5;
   background-image: url("/images/founder-bl-quote.svg");
   top: 80px;
   left: 60px;
@@ -1107,6 +1108,10 @@ button:hover {
 .footer .footer__container .footer__nav .footer__nav-menu .footer__nav-item:active {
   transform: scale(0.95);
 }
+.footer .footer__container .footer__nav .footer__social-media {
+  display: flex;
+  gap: 10px;
+}
 .footer .footer__container .footer__nav .footer__social-media .footer__icon .icon_img:hover {
   transform: translateY(-3px);
   transition: 0.2;
@@ -1156,6 +1161,14 @@ button:hover {
   }
   .origin .origin__container .origin__inner {
     grid-area: 1/2/5/6;
+  }
+}
+@media (max-width: 1040px) {
+  .founder .founder__container .founder__inner .founder__paragraph .founder__text::before {
+    top: 10%;
+  }
+  .footer .footer__container .footer__nav .footer__nav-menu {
+    gap: 50px;
   }
 }
 @media (min-width: 901px) {
@@ -1397,6 +1410,26 @@ button:hover {
   .origin .origin__container .origin__inner .origin__btn {
     max-width: 350px;
   }
+  .founder .founder__container .founder__inner .founder__paragraph .founder__text::before {
+    top: 5%;
+  }
+  .footer .footer__container {
+    padding: 60px 20px 30px;
+  }
+  .footer .footer__container .footer__btn {
+    max-width: 350px;
+    margin-bottom: 60px;
+  }
+  .footer .footer__container .footer__nav {
+    flex-direction: column;
+  }
+  .footer .footer__container .footer__nav .footer__nav-menu {
+    gap: 30px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 768px) {
   .header .header__container {
@@ -1425,6 +1458,16 @@ button:hover {
     min-width: 610px;
     transform: translate(0%, -10%);
   }
+  .founder .founder__container .founder__inner .founder__photo::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #fff, transparent);
+    background: linear-gradient(180deg, rgb(238, 255, 18), rgba(238, 255, 18, 0) 100%);
+    transform: rotate(-180deg);
+  }
   .founder .founder__container .founder__inner .founder__paragraph {
     grid-area: 2/1/3/2;
   }
@@ -1432,28 +1475,16 @@ button:hover {
     line-height: 22px;
     width: 100%;
   }
+  .founder .founder__container .founder__inner .founder__paragraph .founder__text::before {
+    left: 10%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
   .team .team__container .team__card-list {
     gap: 17px;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-  }
-  .footer .footer__container {
-    padding: 60px 20px 30px;
-  }
-  .footer .footer__container .footer__btn {
-    max-width: 350px;
-    margin-bottom: 60px;
-  }
-  .footer .footer__container .footer__nav {
-    flex-direction: column;
-  }
-  .footer .footer__container .footer__nav .footer__nav-menu {
-    gap: 30px 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 30px;
   }
 }
 @media (max-width: 480px) {
