@@ -1,23 +1,40 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+
 let menuBtn = document.querySelector('.header__burgerIcon');
 let menu = document.querySelector('.nav-menu_mobile');
-let menuLinks = document.querySelectorAll('.header__nav-item')
+let menuLinks = document.querySelectorAll('.header__nav-item');
 
 menuBtn.addEventListener('click', function (event) {
     event.preventDefault();
     toggleMenu();
 });
-
 menuLinks.forEach(link => {
     link.addEventListener('click', () => {
         toggleMenu();
     });
 });
-
 function toggleMenu() {
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
     document.body.classList.toggle('lock');
 }
+window.addEventListener('scroll', () => {
+    document.body.classList.remove('lock');
+});
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let hidden_block = document.getElementById("portfolio-hidden");
