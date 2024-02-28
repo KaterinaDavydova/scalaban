@@ -454,7 +454,7 @@
 			text-align: left;
 
 			.slick-slide {
-				border-left: 2px solid rgb(48, 48, 48, .4);
+				border-right: 2px solid rgb(48, 48, 48, .4);
 
 				&:first-child {
 					border-left: none;
@@ -1197,8 +1197,10 @@
 	}
 
 	.investment {
+		margin: 0;
 		.investment__container {
-			padding: 60px 20px;
+			padding: 60px 0 60px 20px;
+			border-radius: 0;
 
 			.investment__headline {
 				flex-direction: column-reverse;
@@ -1221,11 +1223,19 @@
 			}
 
 			.investment__slider {
+				.slick-slide {
+					.slick-current{
+						
+					}
+				}
 				.investment__slide {
-					display: flex;
-					flex-direction: column;
+					display: grid;
+    				grid-template-rows: 90px auto;
 					gap: 19px;
-					padding: 0px;
+					max-width: 310px;
+    				width: 100%;
+					padding: 0 20px 0 0;
+					
 					.investment__title {
 						line-height: 30px;
 					}
@@ -1238,6 +1248,7 @@
 
 			.investment__progress {
 				display: block;
+				width: 95%;
 			}
 		}
 	}
@@ -1504,6 +1515,14 @@
 						width: 80%;
 					}
 				}
+			}
+		}
+	}
+
+	.footer{
+		.footer__container{
+			.footer__logo{
+				margin-bottom: 73px;
 			}
 		}
 	}

@@ -68,6 +68,7 @@ $(function () {
     });
 
     $slider.slick({
+        variableWidth: true,
         speed: 400,
         infinite: true,
         arrows: false,
