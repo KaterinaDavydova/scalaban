@@ -126,6 +126,7 @@ $maxWidth: 1440;
 @font-face {
     font-family: "GT Pressura Mono";
     src: url(../fonts/gt_pressura_mono_regular.woff) format("woff");
+    src: url(../fonts/gt_pressura_mono_regular.woff2) format("woff2");
     src: url(../fonts/gt_pressura_mono_regular.ttf) format("ttf");
     font-weight: normal;
 }
@@ -133,12 +134,14 @@ $maxWidth: 1440;
 @font-face {
     font-family: "GT Pressura";
     src: url(../fonts/gt_pressura_regular.woff) format("woff");
+    src: url(../fonts/gt_pressura_regular.woff2) format("woff2") ;
     src: url(../fonts/gt_pressura_regular.ttf) format("ttf");
     font-weight: normal;
 }
 @font-face {
     font-family: "GT Pressura Bold";
     src: url(../fonts/gt_pressura_pro_bold.woff) format("woff");
+    src: url(../fonts/gt_pressura_pro_bold.woff2) format("woff2");
     src: url(../fonts/gt_pressura_pro_bold.ttf) format("ttf");
     font-weight: normal;
 }

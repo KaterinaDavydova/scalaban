@@ -107,18 +107,21 @@ body .wrapper {
 @font-face {
   font-family: "GT Pressura Mono";
   src: url(../fonts/gt_pressura_mono_regular.woff) format("woff");
+  src: url(../fonts/gt_pressura_mono_regular.woff2) format("woff2");
   src: url(../fonts/gt_pressura_mono_regular.ttf) format("ttf");
   font-weight: normal;
 }
 @font-face {
   font-family: "GT Pressura";
   src: url(../fonts/gt_pressura_regular.woff) format("woff");
+  src: url(../fonts/gt_pressura_regular.woff2) format("woff2");
   src: url(../fonts/gt_pressura_regular.ttf) format("ttf");
   font-weight: normal;
 }
 @font-face {
   font-family: "GT Pressura Bold";
   src: url(../fonts/gt_pressura_pro_bold.woff) format("woff");
+  src: url(../fonts/gt_pressura_pro_bold.woff2) format("woff2");
   src: url(../fonts/gt_pressura_pro_bold.ttf) format("ttf");
   font-weight: normal;
 }
@@ -308,18 +311,21 @@ body .wrapper {
 @font-face {
   font-family: "GT Pressura Mono";
   src: url(../fonts/gt_pressura_mono_regular.woff) format("woff");
+  src: url(../fonts/gt_pressura_mono_regular.woff2) format("woff2");
   src: url(../fonts/gt_pressura_mono_regular.ttf) format("ttf");
   font-weight: normal;
 }
 @font-face {
   font-family: "GT Pressura";
   src: url(../fonts/gt_pressura_regular.woff) format("woff");
+  src: url(../fonts/gt_pressura_regular.woff2) format("woff2");
   src: url(../fonts/gt_pressura_regular.ttf) format("ttf");
   font-weight: normal;
 }
 @font-face {
   font-family: "GT Pressura Bold";
   src: url(../fonts/gt_pressura_pro_bold.woff) format("woff");
+  src: url(../fonts/gt_pressura_pro_bold.woff2) format("woff2");
   src: url(../fonts/gt_pressura_pro_bold.ttf) format("ttf");
   font-weight: normal;
 }
@@ -508,7 +514,7 @@ button:hover {
   color: rgb(48, 48, 48);
   margin-top: auto;
   position: relative;
-  z-index: 10;
+  z-index: 9;
 }
 
 .aboutUs .aboutUs__container {
@@ -947,7 +953,7 @@ button:hover {
   line-height: 39px;
   text-align: left;
   text-transform: uppercase;
-  font-size: calc(20px + 8 * (100vw - 320px) / 1120);
+  font-size: calc(19px + 9 * (100vw - 320px) / 1120);
   margin-bottom: 10px;
 }
 .team .team__container .team__card-list .team__card-item .team__info .team__ln:hover {
@@ -1257,6 +1263,7 @@ button:hover {
   }
   .focus .focus__container {
     padding: 60px 20px;
+    border-radius: 0;
     flex-direction: column;
     position: relative;
     top: 70px;
@@ -1333,6 +1340,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 19px;
+    padding: 0px;
   }
   .investment .investment__container .investment__slider .investment__slide .investment__title {
     line-height: 30px;
@@ -1353,6 +1361,7 @@ button:hover {
   .values .values__container .values__heading {
     line-height: 71px;
     margin: 0;
+    word-spacing: -20px;
   }
   .values .values__container .values__list .values__item {
     padding: 15px 0px 29px;
@@ -1514,6 +1523,9 @@ button:hover {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
+  }
+  .team .team__container .team__card-list .team__card-item .team__position {
+    width: 80%;
   }
 }
 @media (max-width: 480px) {
